@@ -15,7 +15,7 @@
 ### Step 2: Generate SSH Key
 ```bash
 # Generate SSH key with a specific filename and email
-ssh-keygen -t rsa -b 4096 -f ~/.ssh/gcp_vm_key -C "your_email@example.com"
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/gcp_vm_key -C "username"
 ```
 
 #### Key Generation Explained
