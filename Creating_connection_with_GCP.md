@@ -15,14 +15,14 @@
 ### Step 2: Generate SSH Key
 ```bash
 # Generate SSH key with a specific filename and email
-ssh-keygen -t rsa -b 4096 -f ~/.ssh/gcp_vm_key -C "username"
+ssh-keygen -t rsa -b 4096 -f C:\Users\adnaa\.ssh\gcp_vm_key -C "adnannazir10"
 ```
 
 #### Key Generation Explained
 - `-t rsa`: Use RSA encryption
 - `-b 4096`: 4096-bit key length (enhanced security)
 - `-f ~/.ssh/gcp_vm_key`: Specify key file location
-- `-C "your_email@example.com"`: Add identifying comment
+- `-C "username"`: Add identifying comment
 
 ### Step 3: Set Passphrase
 - When prompted, enter a strong passphrase
@@ -32,7 +32,7 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/gcp_vm_key -C "username"
 ### Step 4: Verify Key Generation
 ```bash
 # List the generated keys
-ls ~/.ssh/gcp_vm_key*
+ls C:\Users\adnaa\.ssh\gcp_vm_key*
 ```
 You should see two files:
 - `gcp_vm_key` (private key)
@@ -63,7 +63,7 @@ cat ~/.ssh/gcp_vm_key.pub
 ### Step 2: Test SSH Connection
 ```bash
 # Replace with your actual details
-ssh -i ~/.ssh/gcp_vm_key your_username@your_vm_external_ip
+ssh -i C:\Users\adnaa\.ssh\gcp_vm_key adnannazir10@35.239.180.22
 ```
 
 ### Troubleshooting Connection
@@ -76,12 +76,10 @@ ssh -i ~/.ssh/gcp_vm_key your_username@your_vm_external_ip
 ### Method 1: SCP (Secure Copy)
 ```bash
 # Basic SCP upload command
-scp -r -i ~/.ssh/gcp_vm_key \
-    /path/to/your/project \
-    your_username@your_vm_external_ip:~/
+scp -r -i C:\Users\adnaa\.ssh\gcp_vm_key . adnannazir10@35.239.180.22:~/
 ```
 
-### Method 2: Rsync (Advanced, with exclusions)
+### Optional Method 2: Rsync (Advanced, with exclusions)
 ```bash
 # Rsync with common exclusions
 rsync -avz --exclude='.git' \
