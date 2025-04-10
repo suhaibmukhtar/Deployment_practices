@@ -14,7 +14,6 @@
 
 ### Step 2: Generate SSH Key
 ```bash
-# Generate SSH key with a specific filename and email
 ssh-keygen -t rsa -b 4096 -f C:\Users\adnaa\.ssh\gcp_vm_key -C "adnannazir10"
 ```
 
@@ -29,7 +28,7 @@ ssh-keygen -t rsa -b 4096 -f C:\Users\adnaa\.ssh\gcp_vm_key -C "adnannazir10"
 - Optional but recommended for added security
 - Can be left blank for convenience (not recommended)
 
-### Step 4: Verify Key Generation
+### Step 4: Verify Key Generation (Optional)
 ```bash
 # List the generated keys
 ls C:\Users\adnaa\.ssh\gcp_vm_key*
@@ -60,9 +59,8 @@ cat ~/.ssh/gcp_vm_key.pub
 - External IP: Find in GCP VM instances dashboard
 - Username: Usually your GCP account username
 
-### Step 2: Test SSH Connection
+### Step 2: Test SSH Connection on Local Machine 
 ```bash
-# Replace with your actual details
 ssh -i C:\Users\adnaa\.ssh\gcp_vm_key adnannazir10@35.239.180.22
 ```
 
@@ -75,7 +73,6 @@ ssh -i C:\Users\adnaa\.ssh\gcp_vm_key adnannazir10@35.239.180.22
 
 ### Method 1: SCP (Secure Copy)
 ```bash
-# Basic SCP upload command
 scp -r -i C:\Users\adnaa\.ssh\gcp_vm_key . adnannazir10@35.239.180.22:~/
 ```
 
